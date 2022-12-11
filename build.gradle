@@ -11,12 +11,24 @@ sourceCompatibility = '1.8'
 repositories {
 	mavenCentral()
 }
+ext {
+	set('springCloudVersion', "2021.0.5")
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
 
 dependencies {
-	//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	implementation 'org.springframework.cloud:spring-cloud-starter-eureka:1.4.7.RELEASE'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-zuul:2.2.0.RELEASE'
+	
 }
 
 tasks.named('test') {
