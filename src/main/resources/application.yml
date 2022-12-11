@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: zuul-proxy
+    name: gateway-service
 
 eureka:
   client:
@@ -16,5 +16,19 @@ zuul:
   routes:
     test-service:
       serviceId: test-service
+    report-service:
+      serviceId: report-service
+    order-service:
+      serviceId: order-service
+    item-service:
+      serviceId: item-service
+    product-service:
+      serviceId: product-service
+    payment-service:
+      serviceId: payment-service
+    feedback-service:
+      serviceId: feedback-service
+    user-service:
+      serviceId: user-service
   host:
     socket-timeout-millis: 30000
