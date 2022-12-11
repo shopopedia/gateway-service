@@ -1,4 +1,4 @@
-package com.shopoedia;
+package com.shopoedia.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
